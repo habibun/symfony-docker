@@ -5,13 +5,16 @@ Add project name in env file
 ```
 PROJECT_NAME=symfony-docker
 ```
+First off, build the docker images
+`docker-compose build`
+
+Run the containers
+`docker-compose up -d`
 
 Update system host file (add symfony.local)
 ```
 sudo bash -c 'echo $(docker inspect -f "{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}" symfony-docker-nginx) "symfony.local" >> /etc/hosts'
 ```
-
-
 
 ## docker-compose tool commands
 
