@@ -12,7 +12,6 @@ sudo bash -c 'echo $(docker inspect -f "{{range .NetworkSettings.Networks}}{{.IP
 
 ## docker-compose tool commands
 
-### Docker-compose
 **Build or rebuild services**
 ```
 docker-compose build
