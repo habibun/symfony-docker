@@ -4,7 +4,7 @@
 Add project name in env file
 `PROJECT_NAME=symfony-docker`
 
-First off, build the docker images
+Build the docker images
 `docker-compose build`
 
 Run the containers
