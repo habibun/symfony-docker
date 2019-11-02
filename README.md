@@ -1,11 +1,16 @@
 # A docker skeleton for Symfony 4 project
 
-##commands
+Add project name in env file
+```
+PROJECT_NAME=symfony-docker
+```
 
-**create .env file**
+Update system host file (add symfony.local)
 ```
-cp .env.dist .env
+sudo bash -c 'echo $(docker inspect -f "{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}" symfony-docker-nginx) "symfony.local" >> /etc/hosts'
 ```
+
+## docker-compose tool commands
 
 ### Docker-compose
 **Build or rebuild services**
@@ -16,7 +21,7 @@ docker-compose build
 ```
 docker-compose up -d
 ```
-**Stop containers**
+**Stop running containers**
 ```
 docker-compose down
 ```
@@ -61,11 +66,6 @@ docker exec -it <container> bash
 **ip address**
 ```
 docker inspect <container> | grep IPAddress
-```
-
-**system host file (add symfony.local)**
-```bash
-$ sudo echo $(docker network inspect bridge | grep Gateway | grep -o -E '[0-9\.]+') "symfony.local" >> /etc/hosts
 ```
 
 **stop all containers**
