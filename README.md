@@ -22,16 +22,15 @@ step 6: Update system host file (add symfony.local)
 sudo bash -c 'echo $(docker inspect -f "{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}" symfony-docker-nginx) "symfony.local" >> /etc/hosts'
 ```
 
-visit [symfony.local](http://symfony.local)
+step 7: visit [symfony.local](http://symfony.local)
 
-###access container through bash
-**php-fpm**: `docker-compose exec php-fpm bash`
-**mysql**: `docker-compose exec mysql bash`
-**nginx**: `docker-compose exec nginx bash`
+### access container through bash
+**php-fpm**: `docker-compose exec php-fpm bash`  
+**mysql**: `docker-compose exec mysql bash`  
+**nginx**: `docker-compose exec nginx bash` 
 
-### symfony console 
-symfony console `docker-compose exec php-fpm php bin/console your_command`
-mysql db login `docker-compose exec mysql mysql -uroot -p"root"`
+**symfony console** `docker-compose exec php-fpm php bin/console your_command`  
+**mysql db login** `docker-compose exec mysql mysql -uroot -p"root"` 
 
 ## How it works?
 Have a look at the `docker-compose.yml` file, here are the `docker-compose` built images:
