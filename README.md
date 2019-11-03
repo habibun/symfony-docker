@@ -4,20 +4,20 @@
 
 step 1: download symfony from official site
 
-step 2: **create .env.local file** and Update Environment Variable
+step 2: create **.env.local file** and Update Environment Variable
 ```
 cp .env.dist .env.local
 ```
 
-step 2: copy **docker** folder and **docker-compose.yml** file in your project root
+step 3: copy **docker** folder and **docker-compose.yml** file in your project root
 
-step 3:  Build the docker images
+step 4:  Build the docker images
 `docker-compose build`
 
-step 4: Run the containers
+step 5: Run the containers
 `docker-compose up -d`
 
-step 5: Update system host file (add symfony.local)
+step 6: Update system host file (add symfony.local)
 ```
 sudo bash -c 'echo $(docker inspect -f "{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}" symfony-docker-nginx) "symfony.local" >> /etc/hosts'
 ```
