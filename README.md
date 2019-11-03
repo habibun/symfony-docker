@@ -1,26 +1,47 @@
 # A docker skeleton for Symfony 4 project with nginx and mysql (tested linux platform only)
 
 ## Installation
-Add project name in env file
-`PROJECT_NAME=symfony-docker`
 
-copy **docker** folder and **docker-compose.yml** file in your project root
+step 1: download symfony from official site
 
-Build the docker images
+step 2: **create .env.local file** and Update Environment Variable
+```
+cp .env.dist .env.local
+```
+
+step 2: copy **docker** folder and **docker-compose.yml** file in your project root
+
+step 3:  Build the docker images
 `docker-compose build`
 
-Run the containers
+step 4: Run the containers
 `docker-compose up -d`
 
-Update system host file (add symfony.local)
+step 5: Update system host file (add symfony.local)
 ```
 sudo bash -c 'echo $(docker inspect -f "{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}" symfony-docker-nginx) "symfony.local" >> /etc/hosts'
 ```
 
 visit [symfony.local](http://symfony.local)
 
+###access container through bash
+**php-fpm**: `docker-compose exec php-fpm bash`
+**mysql**: `docker-compose exec mysql bash`
+**nginx**: `docker-compose exec nginx bash`
 
-## docker-compose tool commands
+### symfony console 
+symfony console `docker-compose exec php-fpm php bin/console your_command`
+mysql db login `docker-compose exec mysql mysql -uroot -p"root"`
+
+## How it works?
+Have a look at the `docker-compose.yml` file, here are the `docker-compose` built images:
+
+* `mysql`: This is the MySQL database container
+* `php-fpm`: This is the PHP-FPM container in which the application volume is mounted
+* `nginx`: This is the Nginx webserver container in which application volume is mounted too
+
+
+## docker-compose useful tool commands
 
 **Build or rebuild services**
 ```
