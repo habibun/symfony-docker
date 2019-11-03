@@ -1,8 +1,10 @@
-# A docker skeleton for Symfony 4 project
+# A docker skeleton for Symfony 4 project with nginx and mysql (tested linux platform only)
 
 ## Installation
 Add project name in env file
 `PROJECT_NAME=symfony-docker`
+
+copy **docker** folder and **docker-compose.yml** file in your project root
 
 Build the docker images
 `docker-compose build`
@@ -14,6 +16,9 @@ Update system host file (add symfony.local)
 ```
 sudo bash -c 'echo $(docker inspect -f "{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}" symfony-docker-nginx) "symfony.local" >> /etc/hosts'
 ```
+
+visit [symfony.local](http://symfony.local)
+
 
 ## docker-compose tool commands
 
