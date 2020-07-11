@@ -1,6 +1,6 @@
 #WIP
 
-# A docker skeleton for Symfony project with php-fpm, nginx and mysql (tested linux platform only)
+# A docker skeleton for Symfony project with php-fpm, nginx and mysql (tested in linux platform with symfony 4 and symfony 5)
 
 ## Usage Instruction
 step 1: Copy .env.dist file content to .env file
