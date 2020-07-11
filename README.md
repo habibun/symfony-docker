@@ -2,31 +2,28 @@
 
 # A docker skeleton for Symfony project with php-fpm, nginx and mysql (tested linux platform only)
 
-## Installation
+## Usage Instruction
+step 1: Copy .env.dist file content to .env file
 
-step 1: install symfony project
-
-step 2: Update .env file from .env.dist file
+step 2: Copy docker folder in your project root
 
 step 3: copy **docker** folder and **docker-compose.yml** file in your project root
 
-step 4:  Build the docker images
-`docker-compose build`
+step 4: Build and run the containers
+`docker-compose up -d --build`
 
-step 5: Run the containers
-`docker-compose up -d`
-
-step 6: Update system host file (add symfony.local)
+step 5: Update system host file (add symfony.local) [optional]
 ```
-sudo bash -c 'echo $(docker inspect -f "{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}" symfony-docker-nginx) "symfony.local" >> /etc/hosts'
+sudo bash -c 'echo $(docker inspect -f "{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}" my_web_container_name/id) "symfony.local" >> /etc/hosts'
 ```
 
-step 7: visit [symfony.local](http://symfony.local)
+step 6: visit [symfony.local](http://symfony.local) [optional]
 
 ### access container through bash
 **php-fpm**: `docker-compose exec php-fpm bash`  
 **mysql**: `docker-compose exec mysql bash`  
 **nginx**: `docker-compose exec nginx bash` 
+**encore**: `docker-compose exec encore bash` 
 
 **symfony console** `docker-compose exec php-fpm php bin/console your_command`  
 **mysql db login** `docker-compose exec mysql mysql -uroot -p"root"` 
@@ -36,8 +33,8 @@ Have a look at the `docker-compose.yml` file, here are the `docker-compose` buil
 
 * `mysql`: This is the MySQL database container
 * `php-fpm`: This is the PHP-FPM container in which the application volume is mounted
-* `nginx`: This is the Nginx webserver container in which application volume is mounted too
-
+* `nginx`: This is the Nginx webserver container in which application volume is mounted
+* `encore`: This is the encore container in which application volume is mounted
 
 ## docker-compose useful tool commands
 
