@@ -1,0 +1,45 @@
+version: "3"
+services:
+  nginx:
+    build: ./docker/nginx/dev
+    restart: unless-stopped
+    volumes:
+      - ./:/var/www/
+    depends_on:
+      - php
+      - mysql
+  php:
+    build: ./docker/php/dev
+    restart: unless-stopped
+    volumes:
+      - ./:/var/www/
+    depends_on:
+      - mysql
+  mysql:
+    image: mysql:5.7
+    restart: unless-stopped
+    command: mysqld --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci --init-connect='SET NAMES utf8mb4;'
+    volumes:
+      - ${DOCKER_DATA_PATH}/mysql:/var/lib/mysql
+    environment:
+      - MYSQL_ROOT_PASSWORD=${MYSQL_ROOT_PASSWORD}
+      - MYSQL_DATABASE=${MYSQL_DATABASE}
+      - MYSQL_USER=${MYSQL_USER}
+      - MYSQL_PASSWORD=${MYSQL_PASSWORD}
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    restart: unless-stopped
+    environment:
+      - PMA_HOST=mysql
+    depends_on:
+      - mysql
+  encore:
+    tty: true
+    build: ./docker/encore/dev
+    restart: unless-stopped
+    volumes:
+      - ./:/var/www/
+    depends_on:
+      - nginx
+      - php
+      - mysql
