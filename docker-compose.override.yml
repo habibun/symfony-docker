@@ -1,0 +1,17 @@
+version: "3"
+services:
+  php:
+    environment:
+      XDEBUG_CONFIG: remote_host=${XDEBUG_REMOTE_HOST}
+  nginx:
+    ports:
+      - "81:80"
+  mysql:
+    ports:
+      - "3307:3306"
+  phpmyadmin:
+    ports:
+      - "3308:80"
+  encore:
+    ports:
+      - "8080:8080"
