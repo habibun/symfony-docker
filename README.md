@@ -1,6 +1,6 @@
 #WIP
 
-# A docker skeleton for Symfony 4 project with nginx and mysql (tested linux platform only)
+# A docker skeleton for Symfony project with nginx and mysql (tested linux platform only)
 
 ## Installation
 
