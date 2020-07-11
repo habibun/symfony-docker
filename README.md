@@ -1,5 +1,3 @@
-#WIP
-
 # A docker skeleton for Symfony project with php-fpm, nginx and mysql (tested in linux platform with symfony 4 and symfony 5)
 
 ## Usage Instruction
