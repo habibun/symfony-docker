@@ -23,6 +23,7 @@ step 6: visit [symfony.local](http://symfony.local) [optional]
 **php-fpm**: `docker-compose exec php-fpm bash`  
 **mysql**: `docker-compose exec mysql bash`  
 **nginx**: `docker-compose exec nginx bash` 
+**phpmyadmin**: `docker-compose exec phpmyadmin bash` 
 **encore**: `docker-compose exec encore bash` 
 
 **symfony console** `docker-compose exec php-fpm php bin/console your_command`  
@@ -32,9 +33,10 @@ step 6: visit [symfony.local](http://symfony.local) [optional]
 Have a look at the `docker-compose.yml` file, here are the `docker-compose` built images:
 
 * `mysql`: This is the MySQL database container
-* `php-fpm`: This is the PHP-FPM container in which the application volume is mounted
-* `nginx`: This is the Nginx webserver container in which application volume is mounted
-* `encore`: This is the encore container in which application volume is mounted
+* `php-fpm`: This is the PHP-FPM container
+* `nginx`: This is the Nginx webserver container
+* `phpmyadmin`: This is the phpmyadmin container
+* `encore`: This is the encore container in which
 
 ## docker-compose useful tool commands
 
