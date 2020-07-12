@@ -18,7 +18,7 @@ sudo bash -c 'echo $(docker inspect -f "{{range .NetworkSettings.Networks}}{{.IP
 step 6: visit [symfony.local](http://symfony.local) [optional]
 
 ### access container through bash
-**php-fpm**: `docker-compose exec php-fpm bash`  
+**php-fpm**: `docker-compose exec php bash`  
 **mysql**: `docker-compose exec mysql bash`  
 **nginx**: `docker-compose exec nginx bash` 
 **phpmyadmin**: `docker-compose exec phpmyadmin bash` 
