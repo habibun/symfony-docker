@@ -3,9 +3,9 @@
 ## Usage Instruction
 step 1: Copy .env.dist file content to .env file
 
-step 2: Copy docker folder in your project root
+step 2: Copy **docker** folder in your project root
 
-step 3: copy **docker** folder and **docker-compose.yml** file in your project root
+step 3: copy **docker-compose.yml** file in your project root
 
 step 4: Build and run the containers
 `docker-compose up -d --build`
