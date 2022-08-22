@@ -1,9 +1,10 @@
 # symfony-docker
 Using Docker with Symfony
 
-| Repository Branch    | Docker Version | Symfony Version | PHP Version     |
-|----------------------|----------------|-----------------|-----------------|
-| [docker-skeleton][1] | `20.x`         | `4.x`           | `8.0` or higher |
+| Repository Branch                  | Docker Version | Symfony Version | PHP Version     |
+|------------------------------------|----------------|-----------------|-----------------|
+| [docker-skeleton][docker_skeleton] | `20.x`         | `4.x`           | `8.0` or higher |
+| [twilio][twilio]                   | `20.x`         | `5.4`           | `8.0` or higher |
 
 
 Read [Docker Docs](https://docs.docker.com/)
@@ -22,4 +23,5 @@ The code is licensed under the [MIT License](https://github.com/habibun/symfony-
 
 
 
-[1]: https://github.com/habibun/symfony-docker/tree/docker-skeleton
+[docker_skeleton]: https://github.com/habibun/symfony-docker/tree/docker-skeleton
+[twilio]: https://github.com/habibun/symfony-docker/tree/twilio
