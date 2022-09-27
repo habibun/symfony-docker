@@ -1,0 +1,36 @@
+version: "3.7"
+
+services:
+  nginx:
+    build: docker/nginx
+    restart: on-failure
+    volumes:
+      # this will mount the api folder which contains the code to the docker container
+      - ${PWD}:/var/www/api:delegated
+      # this will mount the nginx logs so that you can check the logs for errors,
+      # without logging into the container
+      - ${PWD}/docker/logs/nginx/:/var/log/nginx:delegated
+      # this will create the server config to serve the api
+      - ${PWD}/docker/nginx/api.conf:/etc/nginx/conf.d/api.conf:delegated
+    ports:
+      - "90:80"
+    depends_on:
+      - api
+#      - ui
+    networks:
+      - monitoring
+
+  api:
+    build: docker/php
+    restart: on-failure
+    volumes:
+      # this will mount the api folder which contains the code to the docker container
+      - ${PWD}:/var/www/api:delegated
+      # this will mount the custom `.ini` to the container
+      - ${PWD}/docker/php/php.ini:/usr/local/etc/php/php.ini:ro
+    networks:
+      - monitoring
+
+networks:
+  monitoring:
+    driver: bridge
