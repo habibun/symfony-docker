@@ -5,7 +5,7 @@ Using Docker with Symfony
 |------------------------------------|----------------|-----------------|-----------------|
 | [docker-skeleton][docker_skeleton] | `20.x`         | `4.x`           | `8.0` or higher |
 | [twilio][twilio]                   | `20.x`         | `5.4`           | `8.0` or higher |
-| [mnsami][mnsami]                   | `20.x`         | `5.4`           | `8.0` or higher |
+| [mnsami][mnsami]                   | `20.x`         | `5.4`           | `7.4` or higher |
 
 
 Read [Docker Docs](https://docs.docker.com/)
