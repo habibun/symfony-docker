@@ -25,7 +25,7 @@ Branches
 
 
 ## License
-The code is licensed under the [MIT License](https://github.com/habibun/symfony-docker/blob/master/LICENSE)
+The code is licensed under the [MIT License](https://github.com/habibun/symfony-docker/blob/main/LICENSE)
 
 
 [docker_skeleton]: https://github.com/habibun/symfony-docker/tree/docker-skeleton
