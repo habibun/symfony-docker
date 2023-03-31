@@ -25,7 +25,7 @@ width="50%"
 **Resources:**
 - [How to Get Started with Docker Compose and Symfony](https://www.twilio.com/blog/get-started-docker-symfony)
 
-#### Prerequisites
+##### Prerequisites
 - [Symfony CLI][symfony_cli], [PHP][php], [Composer][composer], [Git][git], [MySQL][mysql], [Node.js][node]
 
 #### Installation
