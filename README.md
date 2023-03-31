@@ -16,8 +16,8 @@ Please check the [projects](#projects) section for more details.
 <details><summary>Get Started with Docker Compose and Symfony</summary>  
 
 <img
-src="xx"
-alt="xx"
+src="https://user-images.githubusercontent.com/5810350/229069307-d67be635-6543-41ed-9c9c-0fcabb35b08a.png"
+alt="twilio"
 width="50%"
 />
 
@@ -46,12 +46,14 @@ make init
 
 Configure the database connection in the .env.local file
 
+```
+# Start docker services
+make start
+```
+
 ```bash 
 # Install project
 make install
-
-# Start the local development server
-make start
 ```
 
 Please check more rules in [Makefile][twilio_makefile].
