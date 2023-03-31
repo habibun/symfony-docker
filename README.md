@@ -6,10 +6,10 @@ Please check the [projects](#projects) section for more details.
 
 
 ## Overview
-| Branch                             | Docker Version | Symfony Version | PHP Version     |
-|------------------------------------|----------------|-----------------|-----------------|
-| [twilio][twilio]                   | `20.x`         | `5.4`           | `8.0` or higher |
-| [mnsami][mnsami]                   | `20.x`         | `5.4`           | `7.4` or higher |
+| Branch           | Docker Version | Symfony Version | PHP Version |
+|------------------|----------------|-----------------|-------------|
+| [twilio][twilio] | `20.0`         | `^5.4`          | `^8.0`      |
+| [mnsami][mnsami] | `20.x`         | `^5.4`          | `^7.4`      |
 
 
 ## Projects
@@ -25,8 +25,7 @@ width="50%"
 **Resources:**
 - [How to Get Started with Docker Compose and Symfony](https://www.twilio.com/blog/get-started-docker-symfony)
 
-##### Prerequisites
-- [Symfony CLI][symfony_cli], [PHP][php], [Composer][composer], [Git][git], [MySQL][mysql], [Node.js][node]
+##### Prerequisites: [Symfony CLI][symfony_cli], [PHP][php], [Composer][composer], [Git][git], [MySQL][mysql], [Node.js][node]
 
 #### Installation
 
