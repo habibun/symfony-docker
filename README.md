@@ -9,7 +9,7 @@ Please check the [projects](#projects) section for more details.
 | Branch           | Docker Version | Symfony Version | PHP Version |
 |------------------|----------------|-----------------|-------------|
 | [twilio][twilio] | `^23.0`        | `^5.4`          | `^8.0`      |
-| [mnsami][mnsami] | `20.0`         | `^5.4`          | `^7.4`      |
+| [mnsami][mnsami] | `^23.0`         | `^5.4`          | `^7.4`      |
 
 
 ## Projects
@@ -64,8 +64,8 @@ Please check more rules in [Makefile][twilio_makefile].
 <details><summary>Dockerized Symfony backend app with ReactJs for frontend with hotloading enabled</summary>  
 
 <img
-src="xx"
-alt="xx"
+src="https://user-images.githubusercontent.com/5810350/229175263-19b276ff-ea29-45e3-8404-067b7fc1424f.png"
+alt="mnsami"
 width="50%"
 />
 
