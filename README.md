@@ -48,9 +48,7 @@ Configure the database connection in the .env.local file
 ```bash
 # Start docker services
 make start
-```
-
-```bash 
+ 
 # Install project
 make install
 ```
@@ -95,11 +93,11 @@ make init
 Configure the database connection in the .env.local file
 
 ```bash 
+# Start docker services
+make start
+
 # Install project
 make install
-
-# Start the local development server
-make start
 ```
 
 Please check more rules in [Makefile][mnsami_makefile].
