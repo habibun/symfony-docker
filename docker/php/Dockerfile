@@ -16,7 +16,7 @@ RUN apk update \
 
 # install php dependencies
 RUN apk add --no-cache $PHPIZE_DEPS \
-    && pecl install -f xdebug \
+    && pecl install -f xdebug-2.9.8 \
     && docker-php-ext-install intl opcache bcmath sockets \
     && docker-php-ext-enable xdebug intl opcache bcmath sockets \
     && rm -rf /var/lib/apt/lists/*

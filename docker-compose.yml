@@ -2,6 +2,7 @@ version: "3.7"
 
 services:
   nginx:
+    container_name: nginx
     build: docker/nginx
     restart: on-failure
     volumes:
@@ -13,7 +14,7 @@ services:
       # this will create the server config to serve the api
       - ${PWD}/docker/nginx/api.conf:/etc/nginx/conf.d/api.conf:delegated
     ports:
-      - "90:80"
+      - "8080:80"
     depends_on:
       - api
 #      - ui
@@ -21,6 +22,7 @@ services:
       - monitoring
 
   api:
+    container_name: api
     build: docker/php
     restart: on-failure
     volumes:
