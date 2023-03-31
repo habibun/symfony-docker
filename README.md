@@ -46,7 +46,7 @@ make init
 
 Configure the database connection in the .env.local file
 
-```
+```bash
 # Start docker services
 make start
 ```
