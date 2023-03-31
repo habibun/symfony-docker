@@ -8,8 +8,8 @@ Please check the [projects](#projects) section for more details.
 ## Overview
 | Branch           | Docker Version | Symfony Version | PHP Version |
 |------------------|----------------|-----------------|-------------|
-| [twilio][twilio] | `20.0`         | `^5.4`          | `^8.0`      |
-| [mnsami][mnsami] | `20.x`         | `^5.4`          | `^7.4`      |
+| [twilio][twilio] | `^23.0`        | `^5.4`          | `^8.0`      |
+| [mnsami][mnsami] | `20.0`         | `^5.4`          | `^7.4`      |
 
 
 ## Projects
@@ -74,7 +74,7 @@ width="50%"
 - [Setup a dockerized Symfony backend app with ReactJs for frontend with hotloading enabled](https://minasami.com/2021/06/23/part-1-setup-reactjs-symfony-app-with-hotloading.html)
 
 #### Prerequisites
-- [Symfony CLI][symfony_cli], [PHP][php], [Composer][composer], [Git][git], [MySQL][mysql], [Node.js][node]
+- [Symfony CLI][symfony_cli], [PHP][php], [Composer][composer], [Git][git], [MySQL][mysql], [Docker][docker], [Docker Compose][docker_compose]
 
 #### Installation
 
@@ -138,9 +138,12 @@ Distributed under the MIT License. See **[LICENSE][license]** for more informati
 [mnsami]: https://github.com/habibun/symfony-docker/tree/mnsami
 [mnsami_makefile]: https://github.com/habibun/symfony-docker/blob/mnsami/Makefile
 
+[//]: # (Prerequisites)
 [symfony_cli]: https://symfony.com/download
 [php]: https://www.php.net/
 [composer]: https://getcomposer.org/
 [git]: https://git-scm.com/
 [mysql]: https://www.mysql.com/
 [node]: https://nodejs.org/
+[docker]: https://www.docker.com/
+[docker_compose]: https://docs.docker.com/compose/
