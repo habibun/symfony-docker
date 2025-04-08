@@ -3,7 +3,6 @@ Using Docker with Symfony
 
 | Repository Branch                  | Docker Version | Symfony Version | PHP Version     |
 |------------------------------------|----------------|-----------------|-----------------|
-| [docker-skeleton][docker_skeleton] | `20.x`         | `4.x`           | `8.0` or higher |
 | [twilio][twilio]                   | `20.x`         | `5.4`           | `8.0` or higher |
 | [mnsami][mnsami]                   | `20.x`         | `5.4`           | `7.4` or higher |
 
@@ -28,6 +27,5 @@ Branches
 The code is licensed under the [MIT License](https://github.com/habibun/symfony-docker/blob/main/LICENSE)
 
 
-[docker_skeleton]: https://github.com/habibun/symfony-docker/tree/docker-skeleton
 [twilio]: https://github.com/habibun/symfony-docker/tree/twilio
 [mnsami]: https://github.com/habibun/symfony-docker/tree/mnsami
